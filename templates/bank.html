@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <script>
+        document.body.addEventListener("keydown", function (event) {
+    if (event.key === "Tab") {
+        window.location.replace("/mod");
+    }
+});
+      </script>
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+      <div style="width:100%;">
+        <div style="width: 30%; color: white; font-size: 3vw; float: left; margin-left: 5%; color: #90EE90;">Money: {{money}}$</div>
+        
+        <div style="width: 30%; color: #1E90FF; font-size: 3vw; float: left;">Experience: {{experience}}</div>
+        
+        <div style="width: 30%; color: yellow; font-size: 3vw; float: right; text-align: center; ">Max Loan: {{amountAvailable}}</div>
+      </div>
+        <div style="width: 100%; color: red; font-size: 3vw; float: right; text-align: center; margin-bottom: 4%;">Current Debt: {{currentDebt}}$  </div><div style="width: 90%; color: white; font-size: 2vw; float: right; text-align: center; margin-bottom: 4%; margin-left: 5%;margin-right: 5%;">Welcome to HIBHS, the HackerLife Imperial Bank of Hacker States, the best place to apply for a loan! You will see the maximum amount for a loan that you can apply for. You can only apply for a loan, if you don't have any current debt The maximum loan amount will be determined by how much experience you have, for one experience, you can apply for a loan of 5,000$. There are two ways to pay off these loans, the first way is that you will automatically be deducted 40% of your pay per mission which will go to repaying your loan, but for each mission you play before paying off the loan, an aadditional interest of 0.5% will be added to your loan. The second way you could pay off the loan is by adding additional payments via the bank page, this way is recommended because it doesn't add on to interest. </div>
+       <form action="/bank" method="POST">
+        <div class="form-group" style="margin-top: 5%;">
+          
+            <input placeholder="Loan Amount(Minimum: 2000$)" type="text" name="amount" id="amount" class="form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-top: 5%;">
+
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-bottom: 3%;">Get Loan</button>
+      </form>
+      <form action="/payloan" method="POST">
+        <div class="form-group" style="margin-top: 5%;">
+          
+            <input placeholder="Amount to Pay(Minimum: 2000$)" type="text" name="amount" id="amount" class="form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-top: 5%;">
+
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-bottom: 3%;">Pay Loan</button>
+      </form>
+
+    </body>
+</html>

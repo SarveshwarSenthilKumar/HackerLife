@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta div="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%;">Welcome to your inventory!
+      
+</div><br>
+      {% if "1" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >SAMmart PowerPuter</div>
+        <div>Price: 19,999$ + Taxes</div>
+        <div>Level: {{howMany[0]}}</div><br>
+        <div>The SAMmart PowerPuter is a super powerful computer that allows you to earn an extra 5$ increment per mission on top of the normal 15$ increment.</div>
+        {% if howMany[0] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="1">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+    <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="1">Sell the SAMmart PowerPuter</button>
+          </div>
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "2" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart Headphones</div>
+        <div>Price: 249$ + Taxes</div>
+        <div>Level: {{howMany[1]}}</div><br>
+        <div>This item will allow the player to get an additional 5$ for each mission they complete</div>
+        {% if howMany[1] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="2">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+        <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="2">Sell the SAMmart Headphones</button>
+          </div>
+      </form>
+
+      </div><br>
+      {% endif %}
+      {% if "3" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>Rights to “Always gonna give you up!” by Mick Shastley
+        </div>
+        <div> Price: 499,999$ + Taxes</div>
+        <div>Level: {{howMany[2]}}</div><br>
+        <div>After buying this item, you will have the rights to “Always gonna give you up!” by Mick Shastley which means you can Mickroll anyone including Mick Shastley!</div>
+    {% if howMany[2] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="3">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+      {% endif %}
+        
+      <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="3">Sell the Rights to “Always gonna give you up!” by Mick Shastley</button>
+          </div>
+      </form>
+        
+      </div><br>
+      {% endif %}
+      {% if "4" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Darshbury = Dars Bars</div>
+        <div> Price: 6,999$ + Taxes </div>
+        <div>Level: {{howMany[3]}}</div><br>
+        <div> After buying Dars Bars by Darshbury, you can earn up to 10$ extra per mission!</div>
+        {% if howMany[3] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="4">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+        <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="4">Sell the Darshbury Dars Bars</button>
+          </div>
+      </form>
+
+      </div><br>
+      {% endif %}
+      {% if "5" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Abhimart = "The World of Abhijayism" by Abhijay</div>
+        <div> Price: 499,999$ + Taxes </div>
+        <div>Level: {{howMany[4]}}</div><br>
+        <div>Now you can learn more about the World of Abhijayism and earn an extra 1000$ per mission! </div>
+      {% if howMany[4] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="5">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+    {% endif %}
+        <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="5">Sell the "The World of Abhijayism" by Abhijay book</button>
+          </div>
+      </form>
+
+      </div><br>
+      {% endif %}
+      {% if "6" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Tunak Tun Jewelers Diamond Necklace</div>
+        <div> Price: 999,999,999$ + Taxes</div>
+        <div>Level: {{howMany[5]}}</div><br>
+        <div>This legendary, beautiful and exquisite necklace will give you 100,000$ extra per mission!</div>
+        {% if howMany[5] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="6">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+    <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="6">Sell the Diamond Necklace</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "7" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Sarveshwar's Suit Company = 24k Gold Plated Suit</div>
+        <div> Price: 499,999,999$ + Taxes</div>
+        <div>Level: {{howMany[6]}}</div><br>
+        <div> By buying this fabulous suit, you can look as good as the stylish host of CSN, Sarveshwar Senthilkumar, while earning a cool extra of 10,000$ per mission! </div>
+        {% if howMany[6] < 10 %}
+                <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="7">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+        <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="7">Sell the 24k Karat Gold</button>
+          </div>
+      </form>
+
+      </div><br>
+      {% endif %}
+      {% if "8" in itemsOwned %}
+       <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMsan Universe A22</div>
+        <div> Price: 499$ + Taxes </div>
+         <div>Level: {{howMany[7]}}</div><br>
+        <div> This phone is just 499$, this is the deal of the century! </div>
+         {% if howMany[7] < 10 %}
+                 <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="8">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+      {% endif %}
+         <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="8">Sell the Universe A22</button>
+          </div>
+      </form>
+
+      </div><br>
+      {% endif %}
+       {% if "9" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Malbo = Malbo Suru car </div>
+        <div> Price: $299,999 + Taxes</div>
+        <div>Level: {{howMany[8]}}</div><br>
+        <div>The Malbo Suru is a sports car that you can also use to haul your family around. After buying this beast of a performance car, you will earn an extra of 900$ per mission.</div>
+        {% if howMany[8] < 10 %}
+        <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="9">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+        {% endif %}
+      <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="9">Sell the Malbo Suru</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "10" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Sarrari = Sarrari Mustange car </div>
+        <div> Price: $499,999 + Taxes</div>
+        <div>Level: {{howMany[9]}}</div><br>
+        <div>This is the real deal when it comes to speed and performance, and you can have it for just 499,999$. This item will earn you an extra 1,000$ per mission.</div>
+        {% if howMany[0] < 10 %}
+        <form action="/upgrade" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 2%; margin-top:3%;" name="id" value="10">Upgrade Item for 33% (50% Increase)</button>
+          </div>
+      </form>
+          {% endif %}
+       <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="10">Sell the Sarrari Mustange</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+         {% if "11" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Meltsa = Meltsa Domel Z Flannel car </div>
+        <div> Price: $149,999 + Taxes</div><br>
+        <div>the Meltsa Domel Z Flannel is the brand new State of the Art car, with 1,023 Horsepower with a 0-101 KPH in 2.8 seconds. This car is electric so you can go to the track without feeling guilty that you're killing Polar Bears.</div>
+
+        <form action="/sellitem" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="11">Sell the Meltsa Domel Z Flannel</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+        {% if "101" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>Malaz O' Software's HackerLife PC</div>
+        <br>
+        <div>Malaz O' Software's HackerLife PC is the newest state of the art computer, It is like the SAMmart PowerPuter but just plain better.</div>
+
+      </div><br>
+      {% endif %}
+        {% if "100" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>Liam's Swim Goggles</div>
+        <<br>
+        <div>Liam's Swim Goggles, imagine if wearing Swim Goggles gave you extra money whenever you work. Well, you don't have to imagine anymore, now with Liam's Swim Goggles you can earn extra money by just wearing goggles.</div>
+
+      </div><br>
+      {% endif %}
+       {% if "201" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Bronze</div>
+        <div>Available at: 10 Experience</div><br>
+        <div>Additional Benefits: Extra 100$ per mission</div>
+      
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "202"  in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Silver</div>
+        <div>Available at: 25 Experience</div><br>
+        <div>Additional Benefits: Extra 400$ per mission</div>
+      
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "203" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Gold</div>
+        <div>Available at: 50 Experience</div><br>
+        <div>Additional Benefits: Extra 700$ per mission</div>
+    
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "204" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Platinum</div>
+        <div>Available at: 75 Experience</div><br>
+        <div>Additional Benefits: Extra 900$ per mission</div>
+    
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "205"  in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Diamond I</div>
+        <div>Available at: 100 Experience</div><br>
+        <div>Additional Benefits: Extra 999$ per mission</div>
+    
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "206"  in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Diamond II</div>
+        <div>Available at: 130 Experience</div><br>
+        <div>Additional Benefits: Extra 1000$ per mission</div>
+   
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "207" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Emerald</div>
+        <div>Available at: 150 Experience</div><br>
+        <div>Additional Benefits: Extra 1400$ per mission</div>
+      
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "208"  in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Ruby</div>
+        <div>Available at: 175 Experience</div><br>
+        <div>Additional Benefits: Extra 1600$ per missi
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "209" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Grandmaster I</div>
+        <div>Available at: 220 Experience</div><br>
+        <div>Additional Benefits: Extra 1900$ per mission</div>
+      
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "210" in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Grandmaster II</div>
+        <div>Available at: 275 Experience</div><br>
+        <div>Additional Benefits: Extra 2000$ per mission</div>
+      
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+    </body>
+</html>

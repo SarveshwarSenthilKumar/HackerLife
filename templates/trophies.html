@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta div="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%;">Welcome to SAMmart, Be Smart 
+      
+</div><br>
+      {% if "1" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >SAMmart PowerPuter</div>
+        <div>Price: 19,999$ + Taxes</div><br>
+        <div>The SAMmart PowerPuter is a super powerful computer that allows you to earn an extra 5$ increment per mission on top of the normal 15$ increment.</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="1">Buy the SAMmart PowerPuter</button>
+          </div>
+      </form>
+      
+      </div><br>
+      {% endif  %}
+
+    </body>
+</html>

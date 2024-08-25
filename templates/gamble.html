@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="color: white; margin-left: 4%;  margin-right: 79%; float:right; margin-top: 0.7%; ">
+      <iframe width="20" height="20" src="https://www.youtube.com/embed/5_rPNfr6gAI?t=1&controls=0" frameborder="0"   ></iframe>  - Click me to start music!</div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+
+      <form action="/gamble" method="POST">
+        <div class="form-group">
+          
+            <input placeholder="Amount to Gamble" type="text" name="amount" id="amount" class="form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; ">
+          <select id="pick" name="pick" class="form-control" lass="form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%;margin-bottom: 1%; ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            
+          </select>
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%;">Enter Gamble</button>
+      </form>
+ 
+    </body>
+    </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta div="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%;">Welcome to the HackerLife Awards!
+      
+</div><br>
+      {% if "201" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Bronze</div>
+        <div>Available at: 10 Experience</div><br>
+        <div>Additional Benefits: Extra 100$ per mission</div>
+        {% if experience >= 10 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Bronze Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "202" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Silver</div>
+        <div>Available at: 25 Experience</div><br>
+        <div>Additional Benefits: Extra 400$ per mission</div>
+        {% if experience >= 25 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Silver Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "203" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Gold</div>
+        <div>Available at: 50 Experience</div><br>
+        <div>Additional Benefits: Extra 700$ per mission</div>
+        {% if experience >= 50 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Gold Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "204" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Platinum</div>
+        <div>Available at: 75 Experience</div><br>
+        <div>Additional Benefits: Extra 900$ per mission</div>
+        {% if experience >= 75 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Platinum Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "205" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Diamond I</div>
+        <div>Available at: 100 Experience</div><br>
+        <div>Additional Benefits: Extra 999$ per mission</div>
+        {% if experience >= 100 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Diamond I Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "206" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Diamond II</div>
+        <div>Available at: 130 Experience</div><br>
+        <div>Additional Benefits: Extra 1000$ per mission</div>
+        {% if experience >= 130 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Diamond II Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "207" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Emerald</div>
+        <div>Available at: 150 Experience</div><br>
+        <div>Additional Benefits: Extra 1400$ per mission</div>
+        {% if experience >= 150 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Emerald Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "208" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Ruby</div>
+        <div>Available at: 175 Experience</div><br>
+        <div>Additional Benefits: Extra 1600$ per mission</div>
+        {% if experience >= 175 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Ruby Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "209" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Grandmaster I</div>
+        <div>Available at: 220 Experience</div><br>
+        <div>Additional Benefits: Extra 1900$ per mission</div>
+        {% if experience >= 220 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Grandmaster I Medal</button>
+          </div>
+      {% endif %}
+      </form>
+      
+      
+      </div><br>
+      {% endif  %}
+      {% if "210" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Grandmaster II</div>
+        <div>Available at: 275 Experience</div><br>
+        <div>Additional Benefits: Extra 2000$ per mission</div>
+        {% if experience >= 275 %}
+    <form action="/awards" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Grandmaster II Medal</button>
+          </div>
+      {% endif %}
+      </form>
+
+      </div><br>
+      {% endif %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margine-left: 3%;
+margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >Imperial Master</div>
+        <div>Available at: 500 Experience</div><br>
+        <div>Additional Benefits: Extra 8000$ per mission and +9000$ loan per experience</div>
+        {% if experience >= 500 %}
+      <form action="/awards" method="POST">
+        <div class="form-group">
+
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="201">Receive the Imperial Master</button>
+
+      
+      
+      </div><br>
+      {% endif  %}
+      
+
+    </body>
+</html>

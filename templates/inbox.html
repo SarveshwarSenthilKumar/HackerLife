@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta div="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%;">Welcome to your Inbox!
+      
+</div><br>
+      {% for request in requests %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; height: 100%; margin-bottom: 10%;">
+        Requester: {{request.sender}}<br>
+        Amount: {{request.money}}<br>
+      <div style="background-color: #191970;">
+        <form action="/accept" method="POST">
+          <div class="form-group" style="background-color: #191970;">
+            
+            <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-left: 3%;  width: 46%;  float: left;" name="id" value="{{request.id}}">Accept</button>
+            </div>
+        </form>
+        <form action="/decline" method="POST">
+          <div class="form-group">
+            
+            <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw;  margin-right: 3%;  width: 46%; margin-bottom: 5%;  float: right;" name="id" value="{{request.id}}">Decline</button>
+            </div>
+        </form>
+        </div>
+
+      </div><br>
+ {% endfor %}
+      <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%; margin-top: 4%;">Pending Requests by you:</div>
+        {% for request in pending %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; height: 100%; ">
+        Requesting: {{request.receiver}}<br>
+        Amount: {{request.money}}<br>
+     
+    
+
+      </div><br>
+ {% endfor %}
+      <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%; margin-top: 4%;">Requests sent that were accepted:</div>
+        {% for request in accepted %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; height: 100%; ">
+        Requested: {{request.receiver}}<br>
+        Item/Amount: {{request.money}}<br>
+     
+    
+
+      </div><br>
+ {% endfor %}
+      
+</div>
+    </body>
+</html>

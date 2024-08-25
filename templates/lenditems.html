@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="initial-scale=1, width=device-width" >
+        <title>Give Items</title>
+    </head>
+    <body style="background-color: black;">
+      {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+      <div>
+
+  
+      </div>
+      {% if link == None %}
+      <form action="/giveitems" method="POST">
+      {% else %}
+        <form action="/requestitem" method="POST">
+      {% endif %}
+        <div class="form-group" style="margin-bottom: 5%;">
+          <select name="item" id="item" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%;">
+            <option value="1">SAMmart PowerPuter</option>
+            <option value="2">SAMmart Headphones </option>
+            <option value="3">Rights to “Always gonna give you up!” by Mick Shastley</option>
+            <option value="4">Darshbury Dars Bars</option>
+            <option value="5">"The World of Abhijayism" by Abhijay</option>
+            <option value="6">Tunak Tun Jewelers Diamond Necklace</option>
+            <option value="7">Sarveshwar's Suits 24k Gold Plated Suit</option>
+            <option value="8">SAMsan Universe A22</option>
+            <option value="9">Malbo Suru car</option>
+            <option value="10">Sarrari Mustange car</option>
+            <option value="11">Meltsa Domel Z Flannel</option>
+           
+          </select> 
+          <input placeholder="Username (Case Insensitive)" type="text" name="username" id="username" class="form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-bottom: 1%;">
+           {% if link == None %}
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-bottom:5%;">Give Item</button>
+          {% else %}
+          <button type="submit" class="btn btn-danger form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 94%; margin-bottom:5%;">Submit</button>
+          {% endif %}
+      </form>
+
+       
+    </body>
+</html>

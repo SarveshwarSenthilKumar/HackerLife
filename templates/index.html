@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="initial-scale=1, width=device-width" >
+        <title>Login Page</title>
+    </head>
+    <body style="background-color: black;">
+      {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+      <div>
+      <div style="font-size: 2vw; color: white; margin-left: 3%; width: 45%; float: left; margin-bottom: 5%;">Welcome to HackerLife! We would like to tell you that HackerLife is a video game created by CSN, where you play a role of a hacker and you will be hired by different companies in order to find weaknesses, the way you do this is by figuring out codes that were used to break into their software. As you complete these missions, you will get money at the start you will get 500$ a mission, but your payout will increase as you get more experience. You earn experience by completing more missions. This game was built by the Coding Companions (Liam, Sarveshwar, Malaz, Abhijay). This game is not only a game, but also a tool for teachers to teach Financial Literacy to students. In this game, you can learn about  many financial terms and concepts such as loans, interests, taxes, and more.</div>
+        <div style="width: 45%; float: right; margin-right: 3%;">
+          
+        <form action="/signup" method="GET">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw;    ">Login or Sign Up</button>
+      </form>
+          <br>
+          <form action="/companies" method="GET">
+          
+          <button type="submit" class="btn btn-success form-control" style="height: 10%; font-size: 3vw; margin-bottom:5%;    ">View HackerLife Companies</button>
+      </form>
+       
+          <form action="/stats" method="GET">
+          
+          <button type="submit" class="btn btn-warning form-control" style="height: 10%; font-size: 3vw; margin-bottom:5%;    ">View Interesting HackerLife Stats</button>
+      </form>
+          </div>
+        </div>
+       
+       
+    </body>
+</html>

@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta div="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 3vw; margin-left:5%; margin-bottom: 4%;">Welcome to SAMmart, Be Smart 
+      
+</div><br>
+      {% if "1" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div >SAMmart PowerPuter</div>
+        <div>Price: 19,999$ + Taxes</div><br>
+        <div>The SAMmart PowerPuter is a super powerful computer that allows you to earn an extra 5$ increment per mission on top of the normal 15$ increment.</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="1">Buy the SAMmart PowerPuter</button>
+          </div>
+      </form>
+      
+      </div><br>
+      {% endif  %}
+      {% if "2" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart Headphones</div>
+        <div>Price: 249$ + Taxes</div><br>
+        <div>This item will allow the player to get an additional 5$ for each mission they complete</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+                   
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="2">Buy the SAMmart Headphones</button>
+          </div>
+          
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "3" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>Rights to “Always gonna give you up!” by Mick Shastley
+        </div>
+        <div> Price: 499,999$ + Taxes</div><br>
+        <div>After buying this item, you will have the rights to “Always gonna give you up!” by Mick Shastley which means you can Mickroll anyone including Mick Shastley!</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+             
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="3">Buy the Rights to Mickroll</button>
+          </div>
+      </form>
+        
+      </div><br>
+      {% endif %}
+      {% if "4" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Darshbury = Dars Bars</div>
+        <div> Price: 6,999$ + Taxes </div><br>
+        <div> After buying Dars Bars by Darshbury, you can earn up to 10$ extra per mission!</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="4">Buy the SAMmart DarsBars</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "5" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Abhimart = "The World of Abhijayism" by Abhijay</div>
+        <div> Price: 499,999$ + Taxes </div><br>
+        <div>Now you can learn more about the World of Abhijayism and earn an extra 1000$ per mission! </div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="5">Buy the SAMmart Abhijayism Book</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "6" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Tunak Tun Jewelers Diamond Necklace</div>
+        <div> Price: 999,999,999$ + Taxes</div><br>
+        <div>This legendary, beautiful and exquisite necklace will give you 100,000$ extra per mission!</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="6">Buy the SAMmart Necklace</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "7" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Sarveshwar's Suit Company = 24k Gold Plated Suit</div>
+        <div> Price: 499,999,999$ + Taxes</div><br>
+        <div> By buying this fabulous suit, you can look as good as the stylish host of CSN, Sarveshwar Senthilkumar, while earning a cool extra of 10,000$ per mission! </div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="7">Buy the SAMmart Suit</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "8" not in itemsOwned %}
+       <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMsan Universe A22</div>
+        <div> Price: 499$ + Taxes </div><br>
+        <div> This phone is just 499$, this is the deal of the century! </div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+
+         <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="8">Buy the SAMmart Abhijayism Book</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "9" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Malbo = Malbo Suru car </div>
+        <div> Price: $299,999 + Taxes</div><br>
+        <div>The Malbo Suru is a sports car that you can also use to haul your family around. After buying this beast of a performance car, you will earn an extra of 900$ per mission.</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+
+        <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="9">Buy the Malbo Suru</button>
+          </div>
+      </form>
+      </div><br>
+      {% endif %}
+      {% if "10" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Sarrari = Sarrari Mustange car </div>
+        <div> Price: $499,999 + Taxes</div><br>
+        <div>This is the real deal when it comes to speed and performance, and you can have it for just 499,999$. This item will earn you an extra 1,000$ per mission.</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="10">Buy the Sarrari Mustange</button>
+          </div>
+     </form>
+      </div><br>
+      {% endif %}
+      {% if "11" not in itemsOwned %}
+      <div style="color: white; font-size: 4vw; padding-left: 5%; background-color: #191970; margin-left: 3%; margin-right: 3%; padding-right: 5%; padding-top: 5%; padding-bottom: 5%">
+        <div>SAMmart x Meltsa = Meltsa Domel Z Flannel car </div>
+        <div> Price: $149,999 + Taxes</div><br>
+        <div>the Meltsa Domel Z Flannel is the brand new State of the Art car, with 1,023 Horsepower with a 0-101 KPH in 2.8 seconds. This car is electric so you can go to the track without feeling guilty that you're killing Polar Bears.</div>
+        <form action="/store" method="POST">
+        <div class="form-group">
+          
+          
+          <button type="submit" class="btn btn-primary form-control" style="height: 10%; font-size: 3vw; margin-left: 3%; margin-right: 3%;  width: 96%; margin-bottom: 5%; margin-top:3%;" name="id" value="11">Buy the Meltsa Domel Z Flannel</button>
+          </div>
+     </form>
+      </div><br>
+      {% endif %}
+    </body>
+</html>

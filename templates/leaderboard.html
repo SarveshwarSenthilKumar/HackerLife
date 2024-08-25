@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>HackerLife</title>
+    </head>
+    <body style="background-color: black;">
+    {% if sentence != None %}
+      <div style="font-size: 4vw; color: white; text-align: center;">{{sentence}}</div>
+      {% endif %}
+      <div class="topnav" style="width: 100%; height: 100px; margin-bottom: 1%;">
+        <form action="/" method="GET">
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger form-control" style="width: 15%; margin-top:2%; 
+ height: 70px; margin-left: 4%; font-size: 3vw; float: left; margin-bottom: 1%;">Home</button>
+            </div>
+        </form>
+      </div>
+      <div style="font-size: 8vw; color: white; text-align: center; margin-bottom:5%;">HackerLife</div>
+     <div style="color:white; font-size: 4vw; margin-left:5%;">Top 6 Players with the Most Money:  </div><br>
+      <div style="margin-left: 7%;">
+        {% for player in moneys %}
+        <div style="color:white; font-size: 3vw;">{{player.username}} - Money: {{player.money}}</div>
+        {% endfor %}
+      </div>
+        <div style="color:white; font-size: 4vw; margin-left:5%; margin-top: 5%;">Top 6 Players with the Most Experience(Tasks Completed):  </div><br>
+      <div style="margin-left: 7%;">
+        {% for player in experienced %}
+        <div style="color:white; font-size: 3vw;">{{player.username}} - Experience: {{player.experience}}</div>
+        {% endfor %}
+        <div style="color:white; font-size: 4vw; margin-left:5%; margin-top: 5%;">Creators:  </div><br>
+      <div style="margin-left: 7%;">
+        {% for player in creators %}
+        <div style="color:white; font-size: 3vw;">{{player.username}} - Money: {{player.money}} - Experience: {{player.experience}}</div>
+        {% endfor %}
+        <div style="margin-bottom:5%;">HackerLife</div>
+        
+      </div>
+
+    </body>
+</html>
